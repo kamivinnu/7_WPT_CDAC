@@ -1,0 +1,4 @@
+const data = "1001:Harry:Sales:23000 1002:Sarita:Accounts:20000 1003:Monika:TechSupport:35000"
+
+
+const employees = data.split(" ")

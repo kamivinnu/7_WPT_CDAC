@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 30px 35px;
+            width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.15);
+        }
+
+        h1 {
+            margin: 0 0 10px 0;
+            text-align: center;
+            color: #333;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: normal;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 18px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        input:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 5px rgba(74,144,226,0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4a90e2;
+            border: none;
+            font-size: 16px;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #357ac8;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 15px;
+            color: #444;
+        }
+
+        a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="">
+        <h1>Register</h1>
+        <h3>Kindly fill in this form to Register</h3>
+
+        <label for="uname">Username</label>
+        <input type="text" name="uname" id="uname" placeholder="Enter your username" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+        <label for="pass">Password</label>
+        <input type="password" name="pass" id="pass" placeholder="Enter password" required minlength="6">
+
+        <label for="cpass">Confirm Password</label>
+        <input type="password" name="cpass" id="cpass" placeholder="Re-enter password" required>
+
+        <button type="submit">Register</button>
+
+        <p>Already have an account? <a href="#">Login</a></p>
+    </form>
+
+</body>
+</html>

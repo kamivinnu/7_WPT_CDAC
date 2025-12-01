@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Objects Assignment – All Programs</title>
+<style>
+body { font-family: Arial; margin: 20px; }
+h2 { color: darkblue; }
+.output { background: #f2f2f2; padding: 10px; margin-bottom: 20px; border-left: 5px solid green; }
+table, th, td { border: 1px solid black; border-collapse: collapse; padding: 5px; }
+</style>
+</head>
+<body>
+
+<h1>JavaScript Assignment – Combined Output</h1>
+
+<div id="q1" class="output"></div>
+<div id="q2" class="output"></div>
+<div id="q3" class="output"></div>
+<div id="q4" class="output"></div>
+<div id="q5" class="output"></div>
+<div id="q6" class="output"></div>
+<div id="q7" class="output"></div>
+<div id="q8" class="output"></div>
+<div id="q9" class="output"></div>
+<div id="q10" class="output"></div>
+<div id="q11" class="output"></div>
+<div id="q12" class="output"></div>
+
+<script>
+// Q1
+let today = new Date();
+let dayNames = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+let monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+let hour = today.getHours();
+let greeting = hour < 12 ? "Good Morning" : hour < 17 ? "Good Afternoon" : "Good Evening";
+document.getElementById("q1").innerHTML = "<h2>1. Current Date with Greeting</h2>" +
+"Today is " + dayNames[today.getDay()] + ", " + today.getDate() + " " + monthNames[today.getMonth()] + " "
++ today.getFullYear() + ", Welcome, and " + greeting + " to You.";
+
+// Q2
+function getWeekDay(date) {
+  let sd = ["SU","MO","TU","WE","TH","FR","SA"];
+  return sd[date.getDay()];
+}
+document.getElementById("q2").innerHTML = "<h2>2. Short Weekday</h2> " + getWeekDay(new Date(2025,11,1));
+
+// Q3
+let employees = ["Amit","John","Kiran","Daniel","Riya"];
+employees.sort();
+document.getElementById("q3").innerHTML = "<h2>3. Sorted Employee Names</h2>" + employees.join(", ");
+
+// Q4
+let words = ["Apple","Android","Atom","Auto","Ant","Boat","Cat","Aim","Animal","Africa"];
+let filteredWords = words.filter(w => w.length % 2 == 0 && (w.startsWith("A") || w.startsWith("a")));
+document.getElementById("q4").innerHTML = "<h2>4. Even-Length Words Starting with 'A'</h2>" + filteredWords.join(", ");
+
+// Q5
+let arr1 = [11,22,33,44,55];
+let sum = arr1.reduce((a,b)=>a+b,0);
+let avg = sum / arr1.length;
+document.getElementById("q5").innerHTML = "<h2>5. Sum & Average</h2>Sum = " + sum + ", Average = " + avg;
+
+// Q6
+let arr2 = [2,4,6,8,10];
+let squares = arr2.map(n => n * n);
+document.getElementById("q6").innerHTML = "<h2>6. Squares of Array Elements</h2>" + squares.join(", ");
+
+// Q7
+let arr3 = [10,20,30,40,50,60,70,80,90,100];
+let avg2 = arr3.reduce((a,b)=>a+b,0) / arr3.length;
+let count = arr3.filter(n => n > avg2).length;
+document.getElementById("q7").innerHTML = "<h2>7. Count Above Average</h2>Average = " + avg2 + ", Count = " + count;
+
+// Q8
+let sites = ["wwww.google.com","www.msn.com","www.amazon.co.in","in.answers.yahoo.com","codehs.gitbooks.io","wwww.codearch.com","wwww.fb.com"];
+let c = sites.filter(s => s.startsWith("wwww")).length;
+document.getElementById("q8").innerHTML = "<h2>8. Sites Beginning with 'wwww'</h2>Total = " + c;
+
+// Q9
+let emp = [
+ {empid:101, name:"Amit", salary:30000},
+ {empid:102, name:"John", salary:45000},
+ {empid:103, name:"Riya", salary:50000},
+ {empid:104, name:"Kiran", salary:60000}
+];
+let table = "<table><tr><th>Emp ID</th><th>Name</th><th>Salary</th></tr>";
+emp.forEach(e => table += `<tr><td>${e.empid}</td><td>${e.name}</td><td>${e.salary}</td></tr>`);
+table += "</table>";
+document.getElementById("q9").innerHTML = "<h2>9. Employee Table</h2>" + table;
+
+// Q10
+let rectangle = {length:10, breadth:5, area(){return this.length*this.breadth;}, perimeter(){return 2*(this.length+this.breadth);} };
+let circle = {radius:7, area(){return Math.PI*this.radius*this.radius;}, circumference(){return 2*Math.PI*this.radius;} };
+document.getElementById("q10").innerHTML = "<h2>10. Rectangle & Circle</h2>" +
+"Rectangle → Area: " + rectangle.area() + ", Perimeter: " + rectangle.perimeter() +
+"<br>Circle → Area: " + circle.area().toFixed(2) + ", Circumference: " + circle.circumference().toFixed(2);
+
+// Q11
+class Student {
+  constructor(name, course){ this.name = name; this.course = course; }
+  getDetails(){ return `Name: ${this.name}, Course: ${this.course}`; }
+}
+class GraduateStudent extends Student {
+  constructor(name, course, gpa){ super(name, course); this.gpa = gpa; }
+  getDetails(){ return `Name: ${this.name}, Course: ${this.course}, GPA: ${this.gpa}`; }
+}
+let s1 = new GraduateStudent("Vinod", "MCA", 8.7);
+document.getElementById("q11").innerHTML = "<h2>11. Inheritance</h2>" + s1.getDetails();
+
+// Q12
+class Rectangle {
+  constructor(length,breadth){ this.length=length; this.breadth=breadth; }
+  area(){ return this.length*this.breadth; }
+  perimeter(){ return 2*(this.length+this.breadth); }
+  info(){ return `Length: ${this.length}, Breadth: ${this.breadth}, Area: ${this.area()}, Perimeter: ${this.perimeter()}`; }
+}
+let arrRect = [
+ new Rectangle(5,3), new Rectangle(7,4),
+ new Rectangle(10,6), new Rectangle(2,9), new Rectangle(8,5)
+];
+let rectOutput = arrRect.map(r => r.info()).join("<br>");
+document.getElementById("q12").innerHTML = "<h2>12. Rectangle Class Objects</h2>" + rectOutput;
+</script>
+
+</body>
+</html>

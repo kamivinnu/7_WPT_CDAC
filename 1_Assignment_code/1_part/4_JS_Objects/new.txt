@@ -1,0 +1,36 @@
+JS Objects:
+
+1. Create a web page that displays the cuurent date in the format specified as in example below. Also as per current time, suitable greeting should be printed.
+
+    Today is Monday, 24 April 2000, Welcome, and Good Afternoon to You.
+
+2. Write a function getWeekDay(date) to show the weekday in short format: 'MO', 'TU', 'WE', 'TH', 'FR', 'SA", 'SU'.
+
+    eg: let date = new Date(2025, 11, 01); 1 Dec 2025
+    alert(getWeekDay(date)); // should output "TU"
+
+3. Accept and store names of 5 employees into array and display in sorted order of names
+
+4. WAP to accept 10 words from the user into an array. Print all those words which are even in length and starts with A or a?
+
+5. WAP to Create a simple initialized int array with 5 integers. Iterate through the array and find sum and average of all elements. Eg: given array : var arr = [11, 22, 33, 44, 55]
+
+6. WAPt to create a simple initialized int array with 5 integers. Create a new empty array. Read the contents of initialized array and for every elemt, find square of the number and store into new array. Use appropriate array methods.
+
+7. WAP that has 10 numbers already stored in an array. Find the average of all numbers and then print how many numbers are above average.
+
+8. We have an array that holds many web site names. Eg: wwww.ggogle.com, www.msn.com, www.amazon.co.in, in.answers.yahoo.com, codehs.gitbooks.io, wwww.codearnch.com etc. Seacrh for all sites that begin with "wwww" and ddisplay the total number of such sites. Eg for above eg, totall is 4.
+
+9. create an array that holds 4 employee objects and displays each emp detail in a table. Emp details is part of an custom Employee object and could be empid, empname and salary. Use for each loop to inspect all properties of each object.
+
+10. create a custom object for rectangle and circle. individual objects should be able to store dimension, and have methods to print area and perimeter. individual circle objects should be able to store radius, and have methods to rpint area nad circumference. Display dimesnions, area and perimeter of rectangle and circle objects. Make use of Math pre defined objects.
+
+11. Define a custom class students with stud-name and course as properties and a function getdetails() which will print student details
+
+    - Extend the student class to create a GraduateStudent class which has an additional property "gpa".
+    - create objects of GraduateStudent with name, course and gpa. Override the getdetails() methods from student class to display gpa as well.
+
+12. Define a class Rectangle with its length and breadth,.
+    - Provide appropriate constructors, which sets rectangle objectw ith values.
+    - Provide methods to calculate area, calculate perimeter and to display all information of Rectangle (dimesnions, area and perimeter)
+    -  create 5 Rectangle objects by hardcoding all necessary information. Add the objects int an array. Iterate through the array and for each rectangle object, calculate its area and displays its information.

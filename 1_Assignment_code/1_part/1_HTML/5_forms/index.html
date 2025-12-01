@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="0">
+        <tr>
+            <th>Name</th><th>Value</th>
+        </tr>
+
+        <tr>
+            <td>Name</td><td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Sex</td>
+            <td>
+                <input type="radio" name="gender" value="Male">Male <br>
+                <input type="radio" name="gender" value="Female">Female
+            </td>
+        </tr>
+
+        <tr>
+            <td>Eye Color</td>
+            <td>
+                <select name="" size="3" multiple>
+                    <option value="">Red</option>
+                    <option value="" selected>Green</option>
+                    <option value="">Blue</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Check all that apply</td>
+            <td><input type="checkbox">Over 6 feet tall <br> <input type="checkbox">Over 200 pounds</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">Describe your athletic ability</td>
+        </tr>
+        
+        <tr>
+            <td colspan="2"><textarea name="" id="" cols="30" rows="10"></textarea></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="center"><input type="submit" value="Enter your information"></td>
+        </tr>
+    </table>
+
+
+    <br>
+
+    <br>
+
+
+    <table border="0">
+
+        <tr>
+            <td>Username</td><td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Password</td><td><input type="password"></td>
+        </tr>
+
+        <tr>
+            <td>City of Employment</td><td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Web Server: </td>
+            <td>
+                <select name="" id="">
+                    <option value="Apache">Apache</option>
+                    <option value="IIS">IIS</option>
+                    <option value="Nginx">Nginx</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Please Specify your Role</td>
+            <td>
+                <input type="radio" name="role" value="Admin">Admin 
+                <input type="radio" name="role" value="User">Engineer 
+                <input type="radio" name="role" value="User">Manager     
+                <input type="radio" name="role" value="User"> User
+            </td>
+        </tr>
+        
+        <tr>
+            <td>Single Sign on to ther service</td>
+            <td>
+                <input type="checkbox" name="role" value="Admin">Mail 
+                <input type="checkbox" name="role" value="User">Payroll 
+                <input type="checkbox" name="role" value="User">Self-Service
+            </td>
+        </tr>
+
+        <tr>
+            
+            <td></td>
+            <td><input type="submit" value="Login"> <input type="reset" value="Reset"></td>
+        </tr>
+    </table>
+
+    <form action="">
+        <h1>Register</h1>
+
+        <h3>Kindly fill in this form to Register</h3>
+
+        <label for="uname">Username</label> <br>
+        <input type="text" name="uname" id="uname"> <br>
+
+        <label for="email">Email</label> <br>
+        <input type="email" name="email" id="email"> <br>
+
+        <label for="pass">Password</label> <br>
+        <input type="password" name="pass" id="pass"> <br>
+
+        <label for="cpass">Confirm Password</label> <br>
+        <input type="password" name="cpass" id="cpass"> <br>
+
+        <button type="button">Register</button>
+
+        <p>Already have an account? <a href="#">Login</a></p>
+    </form>
+</body>
+</html>

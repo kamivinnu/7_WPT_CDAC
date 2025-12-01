@@ -1,0 +1,8 @@
+8. Why is the main() method static in Java?
+
+Answer:
+Because it is called by the JVM without creating an object, so static allows it to be accessed directly.
+
+Signature:
+
+public static void main(String[] args)

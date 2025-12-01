@@ -1,10 +1,9 @@
-function nameLength(arr) {
-    for(a of arr) {
-        if (a.length > 4)
-            console.log(a)
-    } 
+
+for(i = 1; i < 10; i++) {
+    let row = ""
+    for(j = 1; j <= i; j++) {
+        row += i + " "
+    }
+
+    console.log(row)
 }
-
-var arrNames = ["Joy", "Meena", "Anne", "Xi", "Veena"]
-
-nameLength(arrNames)

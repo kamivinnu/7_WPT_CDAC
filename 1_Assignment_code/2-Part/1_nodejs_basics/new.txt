@@ -1,0 +1,196 @@
+
+for(i = 1; i < 10; i++) {
+    let row = ""
+    for(j = 1; j <= i; j++) {
+        row += i + " "
+    }
+
+    console.log(row)
+}
+
+
+for(i = 1; i < 10; i++) {
+    let row = ""
+    for(j = 1; j <= i; j++) {
+        row += i + " "
+    }
+
+    console.log(row)
+}
+
+
+
+function min(arr) {
+    var minNum = arr[0]
+
+    for(n of arr) {
+        if (n < minNum) {
+            minNum = n
+        }            
+    }
+    console.log(minNum)
+}
+
+var numArr = [106, 37, 40, 79, 51, 25, 26]
+
+min(numArr)
+
+----
+
+const { greetUser } = require("./greet")
+
+require("./greet")
+
+greetUser()
+
+function greet(){
+    var time = new Date()
+
+    if (time.getHours() > 12) {
+        console.log("Good Evening")
+    }
+    else {
+        console.log("Good Morning")
+    }
+    
+}
+
+exports.greetUser = greet
+
+----
+
+exports.add = (a, b) => a + b
+
+exports.subtract = (a, b) => a - b
+
+exports.multiply = (a, b) => a * b
+
+exports.divide = (a, b) => a / b 
+
+exports.square = a => Math.pow(a, 2)
+
+exports.min = (a, b, c) => Math.min(a, b, c)
+
+exports.max = (a, b, c) => Math.max(a, b, c)
+
+// module.exports = {max}
+    
+
+const { subtract, add, multiply, min, square, max, divide } = require("./calc")
+
+// const f1 = require("./calc.js")
+
+require("./calc.js")
+
+console.log("Addition is: ", add(10, 15))
+
+console.log("Substraction is: ", subtract(10, 15))
+
+console.log("Multiplication is: ", multiply(10, 15))
+
+console.log("divide is: ", divide(10, 15))
+
+console.log("sqaure is: ", square(24))
+
+console.log("Minimum is: ", min(10, 15, 25))
+
+console.log("Maximum is: ", max(10, 15, 25))
+
+----
+
+
+
+calcArea = (radius) => radius ** 2
+
+calcCircumference = (radius) => {
+    const pi = 3.14
+    return 2 * pi * radius
+}
+
+calcDiameter = (radius) => 2 * radius
+
+
+
+const {Triangle} = require("./Triangle.js")
+
+var check = new Triangle(10, 10, 10)
+
+console.log(check.isEquilateral())
+
+console.log("The Perimeter of Traingle is: ", check.calcPerimeter())
+
+
+calcArea = (length, breadth) => length * breadth
+
+calcPerimeter = (length, breadth) => 2*(length + breadth)
+
+
+class Triangle {
+    constructor(side1, side2, side3){
+        this.side1 = side1
+        this.side2 = side2
+        this.side3 = side3
+    }
+
+    isEquilateral = () => {
+        if (this.side1 == this.side2 && this.side3 == this.side1) {
+            return "it is an Equivalence Triangle"
+        }
+        else {
+            return "it is not an Equivalence Triangle"
+        }
+    }
+
+    calcPerimeter = () => {
+        var s1 = this.side1
+        var s2 = this.side2
+        var s3 = this.side3
+
+        return s1 + s2 + s2
+    }
+}
+
+module.exports = {Triangle}
+
+-------
+
+
+
+var fs = require("fs")
+
+var arr = ["aaa", "bbb", "ccc"]
+
+fs.writeFile("names.txt", arr.join("|").toString(), (err) => {
+    if (err) {console.log(err.message)}
+    else {console.log("Write Operation Completed")}
+})
+
+const data = "1001:Harry:Sales:23000 1002:Sarita:Accounts:20000 1003:Monika:TechSupport:35000"
+
+
+const employees = data.split(" ")
+
+var fs = require("fs")
+
+var rawData = ""
+
+fs.readFile("emp.txt", (err, data) => {
+    if (err) {
+        console.log(err)
+    }
+    else {
+        rawData = data.toString()
+    }
+})
+
+fs.writeFile("new.js", rawData)
+
+---
+
+import { greetUser } from "./module";
+
+console.log(greetUser("Vinod"))
+
+export function greetUser(name) {
+ return `Hello ${name}`;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Registration Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+            margin: 0;
+            padding: 40px;
+        }
+
+        form {
+            width: 400px;
+            margin: auto;
+        }
+
+        fieldset {
+            background: #fff;
+            padding: 20px 25px;
+            border: 2px solid #4a90e2;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+            padding: 0 10px;
+        }
+
+        input, select {
+            display: block;
+            width: 95%;
+            padding: 8px;
+            margin: 8px 0 15px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus, select:focus {
+            border-color: #4a90e2;
+            box-shadow: 0 0 5px rgba(74,144,226,0.5);
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .radio-group {
+            margin-bottom: 15px;
+        }
+
+        .radio-group input {
+            width: auto;
+            margin-left: 10px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form action="">
+        <fieldset>
+            <legend>Registration Details:</legend>
+
+            <label for="university">University:</label>
+            <input type="text" id="university" name="university">
+
+            <label for="college">Institute:</label>
+            <input type="text" id="college" name="college">
+
+            <label for="branch">Department:</label>
+            <select name="branch" id="branch">
+                <option value="cse">CSE</option>
+                <option value="ece">ECE</option>
+                <option value="eee">EEE</option>
+            </select>
+
+            <div class="radio-group">
+                <label>Course Status:</label><br>
+                <input type="radio" name="done" value="pursuing"> Pursuing
+                <input type="radio" name="done" value="completed"> Completed
+            </div>
+
+            <label for="cpi">Average CPI:</label>
+            <input type="number" name="cpi" id="cpi">
+
+            <label for="exp">Experience:</label>
+            <input type="number" name="exp" id="exp">
+
+            <label for="website">Your website or blog:</label>
+            <input type="url" name="website" id="website">
+        </fieldset>
+    </form>
+
+</body>
+</html>

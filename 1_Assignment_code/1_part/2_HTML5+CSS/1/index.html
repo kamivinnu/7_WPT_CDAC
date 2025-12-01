@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h1>Appointment Scheduler</h1>
+
+        <fieldset>
+            <legend>Personal Information</legend>
+            Name: <input type="text" name="name" id="name"><br>
+            Email: <input type="email" name="email" id="email"><br>
+            Phone: <input type="number" name="phone" id="phone"><br>
+            Date: <input type="date" name="date" id="date"><br>
+            Time: <input type="time" name="time" id="time"><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Appointment Request</legend>
+            What is the reason for your visit?<br>
+            <textarea name="reason" id="reason" cols="30" rows="10"></textarea><br>
+            
+            current pain level:<br>
+            <input type="range" name="pain" id="pain" min="0" max="10"><br>
+            
+            preferred date:<br>
+            <input type="date" name="date" id="date"><br>
+            
+            preferred time:<br>
+            <input type="time" name="time" id="time"><br>
+            
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    
+</body>
+</html>
